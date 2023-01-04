@@ -13,11 +13,10 @@ public class desafioArrays {
 
         double [] notas  = new double [Quantidadenotas];
         
-        int contador = 1;
+        
         for (int i = 0; i < notas.length; i++) {
-            System.out.printf("informe a nota %dº do aluno: ", contador);
+            System.out.printf("informe a nota %dº do aluno: ", i + 1);
             notas[i] = input.nextDouble();
-            contador++;
         }
         
         double somador = 0;
@@ -27,6 +26,6 @@ public class desafioArrays {
         
         System.out.printf("A média do aluno é %.2f", somador / notas.length );
 
-
+        input.close();
     }
 }
