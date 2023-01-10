@@ -20,8 +20,19 @@ public class Lista {
         lista.add(new Usuario("Manu")); 
         
         
-        System.out.println(lista.get(3).nome);
-        System.out.println();
+        System.out.println(lista.get(3));
+        System.out.println(lista.get(2));
+        
+        System.out.println();//Pula Linha
+
+        //removendo da lista:
+        lista.remove(1); //Carlos
+        
+        //removendo apartir de um objeto:
+        lista.remove(new Usuario("Manu"));
+        
+        //verificando se contem na lista:
+        System.out.println("Tem? " + lista.contains(new Usuario("Lia")));
 
         for (Usuario u : lista) {
             System.out.println(u.nome);

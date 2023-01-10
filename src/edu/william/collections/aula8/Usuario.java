@@ -1,21 +1,17 @@
-package edu.william.collections.aula4;
+package edu.william.collections.aula8;
 
 public class Usuario {
-    
     String nome;
 
     Usuario(String nome) {
         this.nome = nome;
     }
 
-
-    
     public String toString() {
         
         return "Meu nome é: " + this.nome + ".";
 
     }
-
 
     @Override
     public int hashCode() {
@@ -42,7 +38,5 @@ public class Usuario {
         return true;
     }
 
-
-    
 
 }
