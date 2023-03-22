@@ -1,8 +1,12 @@
 package edu.william.oo.composicao.desafio;
 
 public class Item {
-    
-    int quantidade;
-    Produto produto;
-     
+
+    final Produto produto;
+    final int quantidade;
+
+    Item(Produto produto, int quantidade) {
+        this.produto = produto;
+        this.quantidade = quantidade;
+    }
 }
