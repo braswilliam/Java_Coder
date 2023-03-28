@@ -2,6 +2,7 @@ package edu.william.oo.heranca.desafio;
 
 public class Civic extends Carro {
 
+    @Override
     void acelerar() {
         super.acelerar();
     }
@@ -10,5 +11,8 @@ public class Civic extends Carro {
         super.frear();
     }
 
+    public String toString() {
+        return "velocidadeatual da Civic: " + velocidadeatual;
+    }
 
 }

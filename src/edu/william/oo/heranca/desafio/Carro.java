@@ -23,11 +23,12 @@ public class Carro {
     }
 
     void frear() {
-        if (this.velocidadeatual < 0) {
-            this.velocidadeatual = 0;
-        } else {
+        if (this.velocidadeatual >= 5) {
             this.velocidadeatual -= 5;
+        } else {
+            this.velocidadeatual = 0;
         }
     }
+
 
 }

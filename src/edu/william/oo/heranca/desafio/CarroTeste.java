@@ -22,8 +22,8 @@ public class CarroTeste {
         ferrari.acelerar();
 
 
-        System.out.println("velocidade Atual do Civic: " + civic.velocidadeatual + "Km");
-        System.out.println("velocidade Atual do Ferrari: " + ferrari.velocidadeatual + "Km");
+        System.out.println(civic);
+        System.out.println(ferrari);
 
 
     }
