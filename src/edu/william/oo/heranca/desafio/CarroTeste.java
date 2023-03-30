@@ -6,11 +6,11 @@ public class CarroTeste {
 
         Civic civic  = new Civic();
         civic.ligar();
+        civic.acelerar();
+        civic.acelerar();
+        civic.acelerar();
+        civic.acelerar();
 
-        civic.acelerar();
-        civic.acelerar();
-        civic.acelerar();
-        civic.acelerar();
 
 
         Ferrari ferrari = new Ferrari();
@@ -21,10 +21,14 @@ public class CarroTeste {
         ferrari.acelerar();
         ferrari.acelerar();
 
+        ferrari.ligarTurbo();
+        ferrari.acelerar();
+        ferrari.desligarTurbo();
 
         System.out.println(civic);
         System.out.println(ferrari);
 
+        System.out.println(ferrari.velocidadedoAr());
 
     }
 

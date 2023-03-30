@@ -7,9 +7,8 @@ public class jogo {
         m1.x = 10;
         m1.y = 10;
 
-        Heroi h1 = new Heroi();
-        h1.x = 10;
-        h1.y = 11;
+        Heroi h1 = new Heroi(10,11);
+
 
 
         System.out.println("\nHP do heroi: " + h1.vida);
