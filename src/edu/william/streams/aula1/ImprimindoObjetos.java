@@ -22,9 +22,9 @@ public class ImprimindoObjetos {
         }
 
         System.out.println("\nUsando o iterator...");
-        Iterator<String> iterator = aprovados.listIterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+        Iterator<String> aprovado = aprovados.listIterator();
+        while (aprovado.hasNext()) {
+            System.out.println(aprovado.next());
         }
 
         System.out.println("\nUsando Stream");
