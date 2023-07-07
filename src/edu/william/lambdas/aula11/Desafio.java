@@ -1,13 +1,14 @@
 package edu.william.lambdas.aula11;
 
 
+import java.util.Locale;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class Desafio {
 
     public static void main(String[] args) {
-
+        Locale.setDefault(Locale.US);
 
         Produto p = new Produto ("Ipad",3235.89, 0.13 );
 
@@ -15,10 +16,10 @@ public class Desafio {
         UnaryOperator<Double> impostoMunicipal = produto -> produto >= 2500 ? produto * (1 + 0.085) : produto;//double
         UnaryOperator<Double> frete = produto -> produto >= 3000 ? produto + 100 : produto + 50;
         Function<Double, String> arredonda = produto -> String.format("%.2f", produto);
-        UnaryOperator<String> formata = produto -> "R$" + produto;
+        UnaryOperator<String> formata = produto -> ("R$" + produto).replace(".", ",");
 
-
-        System.out.printf(valorReal.andThen(impostoMunicipal).andThen(frete).andThen(arredonda).andThen(formata).apply(p));
+        String vFinal = valorReal.andThen(impostoMunicipal).andThen(frete).andThen(arredonda).andThen(formata).apply(p);
+        System.out.printf(vFinal);
 
 
 
