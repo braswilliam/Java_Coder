@@ -3,11 +3,8 @@ package lambdas.aula02;
 import java.util.Arrays;
 import java.util.List;
 
-import static lambdas.aula02.Imprimir.meuImprimir;
-
 public class Foreach {
     public static void main(String[] args) {
-
 
         List<String> aprovados = Arrays.asList("Will", "Bia", "Lia", "Gui");
 
@@ -27,8 +24,17 @@ public class Foreach {
         aprovados.forEach(nome -> meuImprimir(nome));
 
 
+        System.out.println("\nMethod Reference #02...");
+        aprovados.forEach(Foreach::meuImprimir);
+
     }
 
+
+
+    static void
+    meuImprimir(String nome) {
+        System.out.println("Ou meu nome é " + nome);
+    }
 
 
 }
