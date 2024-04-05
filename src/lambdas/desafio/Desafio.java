@@ -16,7 +16,8 @@ public class Desafio {
         UnaryOperator<Double> impostoMunicipal = preco ->  preco >= 2500 ? preco * 1.085 : preco;
         UnaryOperator<Double> frete = preco -> preco >= 3000 ? preco + 100 : preco + 50;
         UnaryOperator<Double> arredondar = preco -> Double.parseDouble(String.format("%.2f", preco));
-        Function<Double, String> formatar = preco -> "R$" + preco + ".";
+        Function<Double, String> formatar = preco -> "R$" + preco;
+        Function<String, String> formatarDois = preco -> preco + " Tá muito Barato!!";
 
 
         Produto p = new Produto("Ipad", 3235.89, 0.13);
@@ -27,6 +28,7 @@ public class Desafio {
                 .andThen(frete)
                 .andThen(arredondar)
                 .andThen(formatar)
+                .andThen(formatarDois)
                 .apply(p);
 
         System.out.println("O preco final é " + preco);
